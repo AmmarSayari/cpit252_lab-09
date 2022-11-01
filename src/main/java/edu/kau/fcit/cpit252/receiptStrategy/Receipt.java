@@ -8,7 +8,7 @@ import java.util.Date;
 import java.util.List;
 import java.util.UUID;
 
-public class Receipt {
+public abstract class Receipt {
     private String id;
     private List<Product> products;
     private String issueDate;
@@ -32,6 +32,6 @@ public class Receipt {
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat(datePattern);
         this.issueDate = simpleDateFormat.format(new Date());
     }
-    public void generate();
+    public abstract void generate();
 
 }
